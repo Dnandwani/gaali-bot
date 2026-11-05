@@ -95,13 +95,16 @@ div.stButton > button:hover {
 # API CONFIGURATION
 # --------------------------------
 
-API_KEY = os.getenv("OPENROUTER_API_KEY")
+api_key = st.secrets.get(
+    "OPENROUTER_API_KEY",
+    os.getenv("OPENROUTER_API_KEY")
+)
 
-if not API_KEY:
+if not api_key:
     try:
-        API_KEY = st.secrets["OPENROUTER_API_KEY"]
+        api_key = st.secrets["OPENROUTER_API_KEY"]
     except Exception:
-        API_KEY = None
+        api_key = None
 
 
 # --------------------------------
