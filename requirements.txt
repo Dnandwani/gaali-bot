@@ -50,3 +50,4 @@ streamlit
 
 tqdm
 requests
+langchain-chroma
