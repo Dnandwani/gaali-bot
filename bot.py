@@ -382,7 +382,7 @@ if not st.session_state.bot_initialized:
     try:
         with st.spinner("Bot taiyaar ho raha hai..."):
 
-            retriever, llm, prompt = initialize_bot(API_KEY)
+            retriever, llm, prompt = initialize_bot(api_key)
 
             st.session_state.retriever = retriever
             st.session_state.llm = llm
