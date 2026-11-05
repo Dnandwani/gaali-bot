@@ -369,7 +369,7 @@ st.divider()
 # INITIALIZE BOT
 # --------------------------------
 
-if not API_KEY:
+if not api_key:
 
     st.error(
         "OpenRouter API key nahi mili. "
