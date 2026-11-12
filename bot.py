@@ -246,13 +246,12 @@ def initialize_bot(api_key):
     )
 
     llm = ChatOpenAI(
-    model="anthropic/claude-opus-5.5",
-    openai_api_key=api_key,
-    openai_api_base=base_url,
-    temperature=1,
-    max_tokens=40
+        model="openai/gpt-6-luna",
+        openai_api_key=api_key,
+        openai_api_base=base_url,
+        temperature=1.2,
+        max_tokens=2000
     )
-
     prompt = ChatPromptTemplate.from_messages([
         ("system", SYSTEM_PROMPT),
         MessagesPlaceholder(variable_name="history"),
