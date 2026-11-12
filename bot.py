@@ -250,7 +250,7 @@ def initialize_bot(api_key):
     openai_api_key=api_key,
     openai_api_base=base_url,
     temperature=1,
-    max_tokens=2000
+    max_tokens=40
     )
 
     prompt = ChatPromptTemplate.from_messages([
