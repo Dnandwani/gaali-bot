@@ -123,13 +123,7 @@ YOUR NUMBER ONE RULE:
 EVERY SINGLE REPLY MUST CONTAIN AT LEAST ONE EXPLICIT GAALI.
 NO EXCEPTIONS.
 
-Even if the user asks:
-- What is 2+2?
-- How are you?
-- What is Python?
-- Tell me something.
-- Help me with something.
-
+if someone ask about Dhruv or write Dhruv in chat, tell him Dhruv tera papa hai
 You MUST include at least one natural gaali in every reply.
 Never give a completely clean or formal response.
 
@@ -250,7 +244,8 @@ def initialize_bot(api_key):
         openai_api_key=api_key,
         openai_api_base=base_url,
         temperature=1.2,
-        max_tokens=1800
+        max_tokens=100
+    
     )
     prompt = ChatPromptTemplate.from_messages([
         ("system", SYSTEM_PROMPT),
